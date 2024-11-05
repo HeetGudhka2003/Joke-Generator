@@ -11,12 +11,13 @@ const authors = ["John Doe", "Jane Smith", "Dad Joke Master", "Anonymous", "Joke
 const getRandomAuthor = () => {
 
     return authors[Math.floor(Math.random() * authors.length)];
+    
 };
 
 // Function to fetch the joke using async/await
 
 const fetchData = async () => {
-
+    
     try {
 
         // Display a loading message
@@ -60,3 +61,7 @@ const fetchData = async () => {
 // Adding Event Listener to the button to fetch the joke when clicked
 
 document.getElementById("fetchJoke").addEventListener("click", fetchData);
+
+// Fetch a joke by default when the page loads
+
+fetchData();
